@@ -11,9 +11,35 @@ public void draw()
 	background(0);   
 	stroke(0,255,0);   
 	line(320,480,320,380);   
-	//drawBranches(??,??,??,??);  //will add later 
+
+	drawBranches(320,380,100,3*Math.PI/2);  //will add later 
 } 
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
-	//your code here    
+	//your code here  
+	double angle1;
+	double angle2; 
+	
+	 //Initialize one to angle plus branchAngle
+	 angle1 = angle + branchAngle;
+    //and the other to angle minus branchAngle
+ 	angle2 = angle - branchAngle;
+	//reduce branchLength by multiplying it by fractionLength
+	branchLength = branchLength * fractionLength;
+
+	int endX1 = (int)(branchLength*Math.cos(angle1) + x);
+	int endY1 = (int)(branchLength*Math.sin(angle1) + y);
+
+	int endX2 = (int)(branchLength*Math.cos(angle2) + x);
+	int endY2 = (int)(branchLength*Math.sin(angle2) + y);
+
+	line(x, y, endX1, endY1);
+	line(x, y, endX2, endY2);
+
+
+//At the end of the drawBranches function write code so that if branchLength is larger than smallestBranch, drawBranches is called twice, once for each of the endpoints, e.g. (endX1,endY1). Be sure to use the two different angles for the two different branches. 
+		if (branchLength> smallestBranch)
+
+
+
 } 
