@@ -1,5 +1,5 @@
 private double fractionLength = .8; 
-private int smallestBranch = 4; 
+private int smallestBranch = 5; 
 private double branchAngle = .2;  
 //private double endX1; 
 //private double endX2; 
