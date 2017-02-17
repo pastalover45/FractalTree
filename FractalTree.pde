@@ -1,8 +1,6 @@
 private double fractionLength = .8; 
-private int smallestBranch = 10; 
+private int smallestBranch = 5; 
 private double branchAngle = .2;  
-//private double endX1; 
-//private double endX2; 
 
 public void setup() 
 {   
@@ -10,12 +8,10 @@ public void setup()
 	noLoop(); 
 } 
 public void draw() 
-{   
-	background(025,25,112);   
+{  
 	background(16,25,74);   
 	stroke(255,255,255);      
 	line(320,480,320,380);   
-
 	drawBranches(320,380,100,3*Math.PI/2);  //will add later 
 } 
 public void drawBranches(int x,int y, double branchLength, double angle) 
@@ -49,17 +45,3 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 
 } 
 
-
-//i'm too behind to do this ;7;
-
-// public void mouseMoved() {
-
-//  double myX,myY;
-
-//  myX= mouseX;
-//  myY= mouseY;
-
-	
-//  redraw();
-	
-// }
